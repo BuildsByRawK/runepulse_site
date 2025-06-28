@@ -4,22 +4,31 @@ import { useEffect } from 'react';
 export default function Home() {
   const inviteLink = 'YOUR_INVITE_LINK_HERE';
 
+  // Updated feature list to include all the new commands and capabilities
   const features = [
     {
-      title: '🧙 Stat Lookup',
-      desc: 'Check any RuneScape player’s stats directly from Discord with detailed embeds.',
+      title: '📊 Advanced Stat Lookup',
+      desc: 'Instantly check any player’s stats, combat level, and account build (Ironman, etc.), powered by the reliable Wise Old Man API.',
+    },
+    {
+      title: '👹 Boss & Clue KC Tracking',
+      desc: 'Flex your boss kill counts and clue scroll completions. Track everything from the God Wars Dungeon to the latest raids.',
+    },
+    {
+      title: '💰 Live G.E. Price Checker',
+      desc: 'Get real-time Grand Exchange prices for any item with a fast and intuitive command, complete with item icons and autocomplete.',
+    },
+    {
+      title: '📈 Dynamic Gains Tracking',
+      desc: 'Monitor your personal weekly progress in every skill and boss. Compete on the server-wide weekly XP leaderboard.',
     },
     {
       title: '⚔️ Compare Players',
-      desc: 'View two RuneScape accounts side by side with highlights for higher stats.',
+      desc: 'View two accounts side-by-side with a detailed comparison, highlighting the higher stats to see who comes out on top.',
     },
     {
-      title: '🎯 Weekly XP Leaderboards',
-      desc: 'Track and post weekly XP gains automatically to your Discord server.',
-    },
-    {
-      title: '🎉 Level-Up Announcements',
-      desc: 'Celebrate level-ups and major milestones like 99s in your community.',
+      title: '🎉 Automated Announcements',
+      desc: 'Celebrate every achievement as a community with automatic announcements for level-ups and major milestones like level 99s.',
     },
   ];
 
@@ -70,7 +79,7 @@ export default function Home() {
             Your ultimate RuneScape Discord companion.
           </p>
           <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
-            Look up stats, compare players, announce achievements, and more — all from your server.
+            Look up stats, track kill counts, check prices, compete on leaderboards, and more — all powered by a fast and reliable API.
           </p>
         </div>
       </section>
@@ -86,9 +95,9 @@ export default function Home() {
               <div
                 key={title}
                 className="feature-card opacity-0 translate-y-8 transition duration-700 ease-out"
-                style={{ transitionDelay: `${index * 300}ms` }}
+                style={{ transitionDelay: `${index * 150}ms` }} // Shortened delay for a snappier feel with more cards
               >
-                <div className="panel-glow p-6 w-full max-w-[400px] mx-auto text-center rounded-2xl cursor-default hover:scale-105 hover:ring-2 hover:ring-blue-500/50 transition-transform duration-300">
+                <div className="panel-glow p-6 w-full max-w-[400px] h-full mx-auto text-center rounded-2xl cursor-default hover:scale-105 hover:ring-2 hover:ring-blue-500/50 transition-transform duration-300">
                   <h3 className="text-lg font-semibold mb-3">{title}</h3>
                   <p className="text-slate-300 text-sm leading-relaxed">{desc}</p>
                 </div>
