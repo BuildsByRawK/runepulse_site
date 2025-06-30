@@ -4,31 +4,31 @@ import { useEffect } from 'react';
 export default function Home() {
   const inviteLink = 'YOUR_INVITE_LINK_HERE';
 
-  // Updated feature list to include all the new commands and capabilities
+  // Final, updated feature list reflecting all bot capabilities
   const features = [
     {
-      title: '📊 Advanced Stat Lookup',
-      desc: 'Instantly check any player’s stats, combat level, and account build (Ironman, etc.), powered by the reliable Wise Old Man API.',
+      title: '📊 Comprehensive Stat Lookup',
+      desc: 'Instantly check any player’s stats, combat level, and account type for both OSRS and RuneScape 3 using the `/check` commands.',
     },
     {
       title: '👹 Boss & Clue KC Tracking',
-      desc: 'Flex your boss kill counts and clue scroll completions. Track everything from the God Wars Dungeon to the latest raids.',
+      desc: 'Use `/kc` to view detailed kill counts for every boss and clue scroll tier, perfect for showing off your PvM accomplishments.',
     },
     {
       title: '💰 Live G.E. Price Checker',
-      desc: 'Get real-time Grand Exchange prices for any item with a fast and intuitive command, complete with item icons and autocomplete.',
+      desc: 'Get real-time Grand Exchange prices for any item with `/price`. Features item icons and a smart autocomplete search.',
     },
     {
-      title: '📈 Dynamic Gains Tracking',
-      desc: 'Monitor your personal weekly progress in every skill and boss. Compete on the server-wide weekly XP leaderboard.',
+      title: '📈 Weekly Gains Tracking',
+      desc: 'Monitor personal progress with `/gains` and compete on the server-wide `/topgains` leaderboard, all based on a weekly snapshot.',
     },
     {
-      title: '⚔️ Compare Players',
-      desc: 'View two accounts side-by-side with a detailed comparison, highlighting the higher stats to see who comes out on top.',
+      title: '🔥 Daily Winner Automation',
+      desc: 'The bot automatically calculates and crowns the top XP earner of the day with a fun, server-wide announcement.',
     },
     {
-      title: '🎉 Automated Announcements',
-      desc: 'Celebrate every achievement as a community with automatic announcements for level-ups and major milestones like level 99s.',
+      title: '📜 Easy-To-Use Help Command',
+      desc: 'A clean, embedded `/help` command that neatly categorizes and explains every feature the bot has to offer.',
     },
   ];
 
@@ -79,7 +79,7 @@ export default function Home() {
             Your ultimate RuneScape Discord companion.
           </p>
           <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-3xl mx-auto">
-            Look up stats, track kill counts, check prices, compete on leaderboards, and more — all powered by a fast and reliable API.
+            Look up stats, track kill counts, check prices, compete on leaderboards, and get automated daily updates for your server.
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default function Home() {
               <div
                 key={title}
                 className="feature-card opacity-0 translate-y-8 transition duration-700 ease-out"
-                style={{ transitionDelay: `${index * 150}ms` }} // Shortened delay for a snappier feel with more cards
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="panel-glow p-6 w-full max-w-[400px] h-full mx-auto text-center rounded-2xl cursor-default hover:scale-105 hover:ring-2 hover:ring-blue-500/50 transition-transform duration-300">
                   <h3 className="text-lg font-semibold mb-3">{title}</h3>
